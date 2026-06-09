@@ -1,0 +1,46 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #1e1e2e;
+}
+
+#workspaces {
+    margin-left: 5px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+    border-bottom: 2px solid #89b4fa;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+#custom-separator {
+    padding: 0 5px;
+}
+
+#bluetooth,
+#clock,
+#battery,
+#backlight,
+#pulseaudio,
+#network {
+    color: #89b4fa;
+    padding: 0 5px;
+    border-bottom: 2px solid #89b4fa;
+}

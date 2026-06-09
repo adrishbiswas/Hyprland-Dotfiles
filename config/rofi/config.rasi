@@ -1,0 +1,6 @@
+@theme "themes/nord.rasi"
+
+configuration {
+    modi: "drun";
+    display-drun: "Search";
+}

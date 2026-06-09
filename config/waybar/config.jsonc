@@ -1,0 +1,87 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [""],
+    "modules-right": [
+       "custom/separator",
+       "pulseaudio",
+       "custom/separator",
+       "network",
+       "custom/separator",
+       "bluetooth",
+       "custom/separator",
+       "backlight",
+       "custom/separator",
+       "battery",
+       "custom/separator",
+       "clock",
+       "custom/separator"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+	"persistent-workspaces": {
+		"*": 4
+	}
+     },
+
+    "custom/separator": {
+	    "format": "|",
+	    "tooltip": false
+    },
+
+    "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "   Muted",
+    "format-icons": {
+            "default": [" ", " "]
+            },
+    "scroll-step": 5,
+    "tooltip": false,
+    "on-click": "alacritty --class wiremix -e wiremix"
+    },
+    
+    "network": {
+	    "format-wifi": "  {essid}",
+            "format-ethernet": "󰌗 {ifname}",
+            "format-disconnected": "󰅛 Disconnected",
+            "tooltip": false,
+            "on-click": "alacritty --class impala -e impala"
+    },
+
+    "bluetooth": {
+    "format": "󰂯 Disconnected",
+    "format-connected": "󰂯 {device_alias}",
+    "on-click": "alacritty --class bluetui -e bluetui"
+    },
+
+    "backlight": {
+	    "format": "{icon} {percent}%",
+            "format-icons": ["", "", "", "", "", "", "", "", ""],
+            "on-scroll-up": "brightnessctl set 5%+",
+            "on-scroll-down": "brightnessctl set 5%-",
+            "tooltip": false
+    },
+
+    "battery": {
+	    "format": "{icon} {capacity}%",
+            "format-discharging": "{icon} {capacity}%",
+            "format-charging": "{icon} {capacity}%",
+            "format-plugged": " {capacity}%",
+            "format-icons": {
+		    "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+                    "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	    },
+            "interval": 5,
+	    "tooltip": false
+    },
+
+    "clock": {
+	    "format": " {:%I:%M %p}"
+    }
+
+}
